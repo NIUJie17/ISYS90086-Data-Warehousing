@@ -1,0 +1,815 @@
+
+	
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<meta http-equiv="X-UA-Compatible" content="IE=7" />
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="author" content="Turnitin, LLC" />
+    <meta name="keywords" content="" /> 
+    <meta name="description" content="" />
+    <meta name="viewport" content="width = initial-scale" />
+    <meta name="viewport" content="height = initial-scale" />
+    
+<title>Turnitin Originality Report</title>
+
+<base href="http://www.turnitin.com">
+<style type="text/css">
+	
+body	{
+	color: #000;
+	background: #ddd;
+	padding: 0;
+	border: 0;
+	font: 14px Arial, Verdana, sans-serif;
+	margin: 0;
+	text-align: center;
+	}
+	
+form	{
+	padding: 0;
+	margin: 0;
+	}
+	
+p	{
+	padding: .8em 1.5em;
+	margin: 0;
+	text-align: left;
+	}
+	
+img	{
+	border: 0;
+	padding: 0;
+	}
+
+div	{
+	padding: 0;
+	border: 0;
+	text-align: left;
+	}
+	
+strong	{
+	font-weight: bold;
+	}
+	
+h2	{
+	font-size: 15px;
+	margin: 20px 0 10px 20px;
+	}
+	
+a:link, a:visited	{
+	text-decoration: underline;
+	color: #00f;
+	}
+	
+a:hover, a:active	{
+	text-decoration: underline;
+	color: #888;
+	}
+	
+img#logo	{
+	float: right;
+	padding-right: 20px;
+	padding-top: 10px;
+	}
+	
+div#container	{
+	border: 1px solid #aaa;
+	width: 770px;
+	margin: 20px auto;
+	background: #fff;
+	padding: 10px 0;
+	}
+	
+div#top	{
+	background: #fff;
+	width: 7in;
+	margin: auto;
+	padding-bottom: 15px;
+	}
+	
+div#content	{
+	background: #fff;
+	}
+	
+#top p	{
+	padding: .3em 0 .3em 20px;
+	}
+
+#top span	{
+	padding-right: 35px;
+	}
+	
+#top p#orig	{
+	padding-top: 15px;
+	}
+	
+#orig span#score.red	{
+	border-right: 18px solid red;
+	padding: .2em .5em;
+	margin: 0 1em;
+	background: white;
+	border-top: 1px solid #888;
+	border-bottom: 1px solid #888;
+	border-left: 1px solid #888;
+	}
+	
+#orig span#score.orange	{
+	border-right: 18px solid orange;
+	padding: .2em .5em;
+	margin: 0 1em;
+	background: white;
+	border-top: 1px solid #888;
+	border-bottom: 1px solid #888;
+	border-left: 1px solid #888;
+	}
+	
+#orig span#score.yellow	{
+	border-right: 18px solid yellow;
+	padding: .2em .5em;
+	margin: 0 1em;
+	background: white;
+	border-top: 1px solid #888;
+	border-bottom: 1px solid #888;
+	border-left: 1px solid #888;
+	}
+	
+#orig span#score.green	{
+	border-right: 18px solid green;
+	padding: .2em .5em;
+	margin: 0 1em;
+	background: white;
+	border-top: 1px solid #888;
+	border-bottom: 1px solid #888;
+	border-left: 1px solid #888;
+	}
+	
+#orig span#score.blue	{
+	border-right: 18px solid blue;
+	padding: .2em .5em;
+	margin: 0 1em;
+	background: white;
+	border-top: 1px solid #888;
+	border-bottom: 1px solid #888;
+	border-left: 1px solid #888;
+	}
+	
+div.divider	{
+	width: 7in;
+	border: 1px dotted #888;
+	margin: auto;
+	padding: 4px 0 4px 10px;
+	font-weight: bold;
+	background: #ddd;
+	font-size: 15px;
+	}
+	
+div.links	{
+	width: 7in;
+	margin: auto;
+	}
+	
+.links div	{
+	padding: 15px 20px 15px 20px;
+	border-bottom: 1px dotted #888;
+	}
+	
+.links div#last	{
+	padding: 15px 20px 20px 20px;
+	border-bottom: 0;
+	}
+	
+div.number	{
+	float: right;
+	background: white;
+	border: 1px solid #888;
+	margin: 0 0 0 20px;
+	padding: .1em .5em;
+	text-align: center;
+	color: black;
+	font-weight: bold;
+	font-size: 15px;
+	line-height: 20px;
+	}
+	
+div.number-l	{
+	float: left;
+	background: white;
+	border: 1px solid #888;
+	margin: 6px 16px 10px 0;
+	padding: .1em .5em;
+	text-align: center;
+	color: black;
+	font-weight: bold;
+	font-size: 15px;
+	line-height: 20px;
+	}
+	
+.links div p	{
+	padding: .2em 1.5em .4em 0;
+	}
+	
+.links div p#mess	{
+	padding: .2em 1.5em 0 0;
+	}
+	
+div#body	{
+	line-height: 1.5em;
+	width: 7in;
+	margin: auto;
+	padding-bottom: 20px;
+	}
+	
+#body p	{
+	color: #555;
+	padding-top: 30px;
+	line-height: 20px;
+	}
+
+	
+#body a	{
+	display: block;
+	color: red;
+	margin: 1em 3em;
+	background-repeat: no-repeat;
+	background-position: top right;
+	padding: 1em 1em;
+	border: 1px dotted #888;
+	font-weight: bold;
+	font-size: 15px;
+	text-decoration: none;
+	line-height: 26px;
+	background: #FFFFE5;
+	}
+
+#body span	{
+	color: #555;
+	font-weight: normal;
+	font-size: 14px;
+	}
+
+#body span.number	{
+	display: block;
+	float: right;
+	color: #000;
+	font-weight: normal;
+	border: 1px solid #888;
+	padding: 0 6px;
+	font-weight: bold;
+	margin-left: 15px;
+	font-size: .9em;
+	background: #fff;
+	}
+	
+#actions	{
+	display: none;
+	}
+
+</style>
+
+
+
+</head>
+
+<body id="or_print_report">
+
+
+<div id="container">
+
+<div id="top">
+    <div id="content">
+        <!-- ######### Top Body  ##########################--> 
+        <div id="top_body">
+            <p id="title">
+            <img src="/r/build/images/b3964fd7e38c8fcbb8bfbf2efc1f0635cb_turnitin_logo.gif" id="logo" width="60">
+            Turnitin Originality Report
+            </p>
+                <div class="general_info">
+                    <p>
+                        <span>Executive Summary</span>
+                        
+                        by Niujie Cheng Chiyu .
+                        
+                    </p>
+                    <p>
+                        From turnitin (turnitin)
+                    </p>
+                    <ul>
+                        <li>Processed on 16-Jan-2020  5:04 AM EST</li>
+                        <li>ID: 1242579949</li>
+                        <li>Word Count: 4498</li>
+                    </ul>
+                </div>
+                <div class="similarity_box">
+                    <div class="overall_similarity">
+                        <div class="color_box yellow">&nbsp;</div>
+                        <div class="similarity_title">Similarity Index</div>
+                        <div class="similarity_percent">34%</div>
+                    </div>
+                    <div class="similarity_by_source">
+                        <div class="similarity_title">Similarity by Source</div>
+                        <dl>
+                            <dt>Internet&nbsp;Sources:</dt>
+                            <dd>6%</dd>
+                            <div class="clear"></div>
+                            <dt>Publications:</dt>
+                            <dd>1%</dd>
+                            <div class="clear"></div>
+                            <dt>Student&nbsp;Papers:</dt>
+                            <dd>34%</dd>
+                            <div class="clear"></div>
+                        </dl>
+                    </div>
+                </div>
+                <div class="clear"></div>
+                                 
+        </div>
+        <!-- ######### END Top Body  ##########################--> 
+    </div>
+</div>
+
+<div class="divider">sources:</div>
+
+<div class="links">
+
+	<div>
+	<div class="number-l">1</div>
+	<p>5% match (student papers from 16-Jan-2019)</p>
+
+	<a style="color:red" href="/paperInfo.asp?r=38.0712900759971&svr=57&session-id=c22e5539a334336c5352ae90fe7f8401&lang=en_us&oid=oid:1:1479405225&perc=5">Submitted to University of Melbourne on 2019-01-16</a>
+
+	</div>
+	<div>
+	<div class="number-l">2</div>
+	<p>3% match (student papers from 16-Jan-2019)</p>
+
+	<a style="color:green" href="/paperInfo.asp?r=38.0712900759971&svr=57&session-id=c22e5539a334336c5352ae90fe7f8401&lang=en_us&oid=oid:1:1479473652&perc=3">Submitted to University of Melbourne on 2019-01-16</a>
+
+	</div>
+	<div>
+	<div class="number-l">3</div>
+	<p>2% match (student papers from 29-Jan-2018)</p>
+
+	<a style="color:blue" href="/paperInfo.asp?r=38.0712900759971&svr=57&session-id=c22e5539a334336c5352ae90fe7f8401&lang=en_us&oid=oid:1:907632014&perc=2">Submitted to University of Melbourne on 2018-01-29</a>
+
+	</div>
+	<div>
+	<div class="number-l">4</div>
+	<p>1% match (student papers from 20-Sep-2016)</p>
+
+	<a style="color:brown" href="/paperInfo.asp?r=38.0712900759971&svr=57&session-id=c22e5539a334336c5352ae90fe7f8401&lang=en_us&oid=oid:1:707597963&perc=1">Submitted to University of Melbourne on 2016-09-20</a>
+
+	</div>
+	<div>
+	<div class="number-l">5</div>
+	<p>1% match (student papers from 05-May-2014)</p>
+
+	<a style="color:#ff6600" href="/paperInfo.asp?r=38.0712900759971&svr=57&session-id=c22e5539a334336c5352ae90fe7f8401&lang=en_us&oid=oid:1:424011608&perc=1">Submitted to University of Melbourne on 2014-05-05</a>
+
+	</div>
+	<div>
+	<div class="number-l">6</div>
+	<p>1% match (student papers from 29-Jan-2018)</p>
+
+	<a style="color:#630000" href="/paperInfo.asp?r=38.0712900759971&svr=57&session-id=c22e5539a334336c5352ae90fe7f8401&lang=en_us&oid=oid:1:907602515&perc=1">Submitted to University of Melbourne on 2018-01-29</a>
+
+	</div>
+	<div>
+	<div class="number-l">7</div>
+	<p>1% match (student papers from 06-May-2013)</p>
+
+	<a style="color:#009cff" href="/paperInfo.asp?r=38.0712900759971&svr=57&session-id=c22e5539a334336c5352ae90fe7f8401&lang=en_us&oid=oid:1:327582194&perc=1">Submitted to University of Melbourne on 2013-05-06</a>
+
+	</div>
+	<div>
+	<div class="number-l">8</div>
+	<p>1% match (student papers from 22-Oct-2018)</p>
+
+	<a style="color:#31ff00" href="/paperInfo.asp?r=38.0712900759971&svr=57&session-id=c22e5539a334336c5352ae90fe7f8401&lang=en_us&oid=oid:1:1024458243&perc=1">Submitted to University of Queensland on 2018-10-22</a>
+
+	</div>
+	<div>
+	<div class="number-l">9</div>
+	<p>1% match (student papers from 16-Jan-2019)</p>
+
+	<a style="color:#330099" href="/paperInfo.asp?r=38.0712900759971&svr=57&session-id=c22e5539a334336c5352ae90fe7f8401&lang=en_us&oid=oid:1:1064746327&perc=1">Submitted to University of Melbourne on 2019-01-16</a>
+
+	</div>
+	<div>
+	<div class="number-l">10</div>
+	<p>1% match (student papers from 18-Dec-2010)</p>
+
+	<a style="color:#00cc99" href="/paperInfo.asp?r=38.0712900759971&svr=57&session-id=c22e5539a334336c5352ae90fe7f8401&lang=en_us&oid=oid:1:164767723&perc=1">Submitted to Laureate Higher Education Group on 2010-12-18</a>
+
+	</div>
+	<div>
+	<div class="number-l">11</div>
+	<p>1% match (student papers from 17-Jan-2019)</p>
+
+	<a style="color:#ff0063" href="/paperInfo.asp?r=38.0712900759971&svr=57&session-id=c22e5539a334336c5352ae90fe7f8401&lang=en_us&oid=oid:1:1479542887&perc=1">Submitted to University of Melbourne on 2019-01-17</a>
+
+	</div>
+	<div>
+	<div class="number-l">12</div>
+	<p>1% match (student papers from 04-May-2014)</p>
+
+	<a style="color:#006331" href="/paperInfo.asp?r=38.0712900759971&svr=57&session-id=c22e5539a334336c5352ae90fe7f8401&lang=en_us&oid=oid:1:423658950&perc=1">Submitted to University of Melbourne on 2014-05-04</a>
+
+	</div>
+	<div>
+	<div class="number-l">13</div>
+	<p>1% match (student papers from 09-May-2011)</p>
+
+	<a style="color:#9966ff" href="/paperInfo.asp?r=38.0712900759971&svr=57&session-id=c22e5539a334336c5352ae90fe7f8401&lang=en_us&oid=oid:1:186405278&perc=1">Submitted to Colorado Technical University Online on 2011-05-09</a>
+
+	</div>
+	<div>
+	<div class="number-l">14</div>
+	<p>1% match (student papers from 25-Mar-2013)</p>
+
+	<a style="color:#9c6331" href="/paperInfo.asp?r=38.0712900759971&svr=57&session-id=c22e5539a334336c5352ae90fe7f8401&lang=en_us&oid=oid:1:315013538&perc=1">Submitted to Colorado Technical University Online on 2013-03-25</a>
+
+	</div>
+	<div>
+	<div class="number-l">15</div>
+	<p>1% match (student papers from 16-Jan-2019)</p>
+
+	<a style="color:#ce0031" href="/paperInfo.asp?r=38.0712900759971&svr=57&session-id=c22e5539a334336c5352ae90fe7f8401&lang=en_us&oid=oid:1:1064765494&perc=1">Submitted to University of Melbourne on 2019-01-16</a>
+
+	</div>
+	<div>
+	<div class="number-l">16</div>
+	<p>1% match (student papers from 29-Jan-2017)</p>
+
+	<a style="color:#cc9900" href="/paperInfo.asp?r=38.0712900759971&svr=57&session-id=c22e5539a334336c5352ae90fe7f8401&lang=en_us&oid=oid:1:763801343&perc=1">Submitted to University of Melbourne on 2017-01-29</a>
+
+	</div>
+	<div>
+	<div class="number-l">17</div>
+	<p>1% match (student papers from 17-Jan-2019)</p>
+
+	<a style="color:#63009c" href="/paperInfo.asp?r=38.0712900759971&svr=57&session-id=c22e5539a334336c5352ae90fe7f8401&lang=en_us&oid=oid:1:1064850542&perc=1">Submitted to University of Melbourne on 2019-01-17</a>
+
+	</div>
+	<div>
+	<div class="number-l">18</div>
+	<p>1% match (student papers from 30-Jan-2017)</p>
+
+	<a style="color:#cc6600" href="/paperInfo.asp?r=38.0712900759971&svr=57&session-id=c22e5539a334336c5352ae90fe7f8401&lang=en_us&oid=oid:1:763924115&perc=1">Submitted to University of Melbourne on 2017-01-30</a>
+
+	</div>
+	<div>
+	<div class="number-l">19</div>
+	<p>1% match (student papers from 05-May-2014)</p>
+
+	<a style="color:#cc0066" href="/paperInfo.asp?r=38.0712900759971&svr=57&session-id=c22e5539a334336c5352ae90fe7f8401&lang=en_us&oid=oid:1:423677199&perc=1">Submitted to University of Melbourne on 2014-05-05</a>
+
+	</div>
+	<div>
+	<div class="number-l">20</div>
+	<p>1% match (student papers from 11-Mar-2019)</p>
+
+	<a style="color:#33cc99" href="/paperInfo.asp?r=38.0712900759971&svr=57&session-id=c22e5539a334336c5352ae90fe7f8401&lang=en_us&oid=oid:2:594887454&perc=1">Submitted to Staffordshire University on 2019-03-11</a>
+
+	</div>
+	<div>
+	<div class="number-l">21</div>
+	<p>< 1% match (student papers from 30-Jan-2017)</p>
+
+	<a style="color:#336699" href="/paperInfo.asp?r=38.0712900759971&svr=57&session-id=c22e5539a334336c5352ae90fe7f8401&lang=en_us&oid=oid:1:763842825&perc=0">Submitted to University of Melbourne on 2017-01-30</a>
+
+	</div>
+	<div>
+	<div class="number-l">22</div>
+	<p>< 1% match (student papers from 21-Jun-2013)</p>
+
+	<a style="color:red" href="/paperInfo.asp?r=38.0712900759971&svr=57&session-id=c22e5539a334336c5352ae90fe7f8401&lang=en_us&oid=oid:2:25201899&perc=0">Submitted to Ealing, Hammersmith and West London College on 2013-06-21</a>
+
+	</div>
+	<div>
+	<div class="number-l">23</div>
+	<p>< 1% match (student papers from 15-Jan-2019)</p>
+
+	<a style="color:green" href="/paperInfo.asp?r=38.0712900759971&svr=57&session-id=c22e5539a334336c5352ae90fe7f8401&lang=en_us&oid=oid:1:1064319047&perc=0">Submitted to University of Melbourne on 2019-01-15</a>
+
+	</div>
+	<div>
+	<div class="number-l">24</div>
+	<p>< 1% match (student papers from 09-Feb-2017)</p>
+
+	<a style="color:blue" href="/paperInfo.asp?r=38.0712900759971&svr=57&session-id=c22e5539a334336c5352ae90fe7f8401&lang=en_us&oid=oid:1:768692524&perc=0">Submitted to University of Melbourne on 2017-02-09</a>
+
+	</div>
+	<div>
+	<div class="number-l">25</div>
+	<p>< 1% match (student papers from 20-Jun-2019)</p>
+
+	<a style="color:brown" href="/paperInfo.asp?r=38.0712900759971&svr=57&session-id=c22e5539a334336c5352ae90fe7f8401&lang=en_us&oid=oid:1:1571764811&perc=0">Submitted to Colorado Technical University Online on 2019-06-20</a>
+
+	</div>
+	<div>
+	<div class="number-l">26</div>
+	<p>< 1% match (student papers from 17-Jan-2019)</p>
+
+	<a style="color:#ff6600" href="/paperInfo.asp?r=38.0712900759971&svr=57&session-id=c22e5539a334336c5352ae90fe7f8401&lang=en_us&oid=oid:1:1064788642&perc=0">Submitted to University of Melbourne on 2019-01-17</a>
+
+	</div>
+	<div>
+	<div class="number-l">27</div>
+	<p>< 1% match (student papers from 29-Jan-2018)</p>
+
+	<a style="color:#630000" href="/paperInfo.asp?r=38.0712900759971&svr=57&session-id=c22e5539a334336c5352ae90fe7f8401&lang=en_us&oid=oid:1:907635937&perc=0">Submitted to University of Melbourne on 2018-01-29</a>
+
+	</div>
+	<div>
+	<div class="number-l">28</div>
+	<p>< 1% match (student papers from 05-May-2014)</p>
+
+	<a style="color:#009cff" href="/paperInfo.asp?r=38.0712900759971&svr=57&session-id=c22e5539a334336c5352ae90fe7f8401&lang=en_us&oid=oid:1:423735044&perc=0">Submitted to University of Melbourne on 2014-05-05</a>
+
+	</div>
+	<div>
+	<div class="number-l">29</div>
+	<p>< 1% match (Internet from 15-Jul-2019)</p>
+
+	<a style="color:#31ff00" href="https://ethnobiomed.biomedcentral.com/articles/10.1186/s13002-017-0164-9">https://ethnobiomed.biomedcentral.com/articles/10.1186/s13002-017-0164-9</a>
+
+	</div>
+	<div>
+	<div class="number-l">30</div>
+	<p>< 1% match (student papers from 16-Jan-2019)</p>
+
+	<a style="color:#330099" href="/paperInfo.asp?r=38.0712900759971&svr=57&session-id=c22e5539a334336c5352ae90fe7f8401&lang=en_us&oid=oid:1:1479508022&perc=0">Submitted to University of Melbourne on 2019-01-16</a>
+
+	</div>
+	<div>
+	<div class="number-l">31</div>
+	<p>< 1% match (student papers from 17-Jan-2019)</p>
+
+	<a style="color:#00cc99" href="/paperInfo.asp?r=38.0712900759971&svr=57&session-id=c22e5539a334336c5352ae90fe7f8401&lang=en_us&oid=oid:1:1479530412&perc=0">Submitted to University of Melbourne on 2019-01-17</a>
+
+	</div>
+	<div>
+	<div class="number-l">32</div>
+	<p>< 1% match (student papers from 11-May-2018)</p>
+
+	<a style="color:#ff0063" href="/paperInfo.asp?r=38.0712900759971&svr=57&session-id=c22e5539a334336c5352ae90fe7f8401&lang=en_us&oid=oid:2:88940645&perc=0">Submitted to University of Southampton on 2018-05-11</a>
+
+	</div>
+	<div>
+	<div class="number-l">33</div>
+	<p>< 1% match (student papers from 30-Jan-2017)</p>
+
+	<a style="color:#006331" href="/paperInfo.asp?r=38.0712900759971&svr=57&session-id=c22e5539a334336c5352ae90fe7f8401&lang=en_us&oid=oid:1:763847860&perc=0">Submitted to University of Melbourne on 2017-01-30</a>
+
+	</div>
+	<div>
+	<div class="number-l">34</div>
+	<p>< 1% match (student papers from 27-Jan-2018)</p>
+
+	<a style="color:#9966ff" href="/paperInfo.asp?r=38.0712900759971&svr=57&session-id=c22e5539a334336c5352ae90fe7f8401&lang=en_us&oid=oid:1:907393464&perc=0">Submitted to University of Melbourne on 2018-01-27</a>
+
+	</div>
+	<div>
+	<div class="number-l">35</div>
+	<p>< 1% match (student papers from 29-Jan-2017)</p>
+
+	<a style="color:#9c6331" href="/paperInfo.asp?r=38.0712900759971&svr=57&session-id=c22e5539a334336c5352ae90fe7f8401&lang=en_us&oid=oid:1:763644973&perc=0">Submitted to University of Melbourne on 2017-01-29</a>
+
+	</div>
+	<div>
+	<div class="number-l">36</div>
+	<p>< 1% match (student papers from 30-Jan-2017)</p>
+
+	<a style="color:#ce0031" href="/paperInfo.asp?r=38.0712900759971&svr=57&session-id=c22e5539a334336c5352ae90fe7f8401&lang=en_us&oid=oid:1:763821046&perc=0">Submitted to University of Melbourne on 2017-01-30</a>
+
+	</div>
+	<div>
+	<div class="number-l">37</div>
+	<p>< 1% match (student papers from 18-Sep-2016)</p>
+
+	<a style="color:#cc9900" href="/paperInfo.asp?r=38.0712900759971&svr=57&session-id=c22e5539a334336c5352ae90fe7f8401&lang=en_us&oid=oid:1:706826431&perc=0">Submitted to University of Melbourne on 2016-09-18</a>
+
+	</div>
+	<div>
+	<div class="number-l">38</div>
+	<p>< 1% match (student papers from 29-Jan-2017)</p>
+
+	<a style="color:#63009c" href="/paperInfo.asp?r=38.0712900759971&svr=57&session-id=c22e5539a334336c5352ae90fe7f8401&lang=en_us&oid=oid:1:763785939&perc=0">Submitted to University of Melbourne on 2017-01-29</a>
+
+	</div>
+	<div>
+	<div class="number-l">39</div>
+	<p>< 1% match (student papers from 29-Jan-2018)</p>
+
+	<a style="color:#cc6600" href="/paperInfo.asp?r=38.0712900759971&svr=57&session-id=c22e5539a334336c5352ae90fe7f8401&lang=en_us&oid=oid:1:907628023&perc=0">Submitted to University of Melbourne on 2018-01-29</a>
+
+	</div>
+	<div>
+	<div class="number-l">40</div>
+	<p>< 1% match (student papers from 30-Jan-2017)</p>
+
+	<a style="color:#cc0066" href="/paperInfo.asp?r=38.0712900759971&svr=57&session-id=c22e5539a334336c5352ae90fe7f8401&lang=en_us&oid=oid:1:763911370&perc=0">Submitted to University of Melbourne on 2017-01-30</a>
+
+	</div>
+	<div>
+	<div class="number-l">41</div>
+	<p>< 1% match (student papers from 18-Sep-2016)</p>
+
+	<a style="color:#33cc99" href="/paperInfo.asp?r=38.0712900759971&svr=57&session-id=c22e5539a334336c5352ae90fe7f8401&lang=en_us&oid=oid:1:706812764&perc=0">Submitted to University of Melbourne on 2016-09-18</a>
+
+	</div>
+	<div>
+	<div class="number-l">42</div>
+	<p>< 1% match (student papers from 17-Jan-2019)</p>
+
+	<a style="color:#336699" href="/paperInfo.asp?r=38.0712900759971&svr=57&session-id=c22e5539a334336c5352ae90fe7f8401&lang=en_us&oid=oid:1:1479585123&perc=0">Submitted to University of Melbourne on 2019-01-17</a>
+
+	</div>
+	<div>
+	<div class="number-l">43</div>
+	<p>< 1% match (student papers from 17-Jan-2019)</p>
+
+	<a style="color:red" href="/paperInfo.asp?r=38.0712900759971&svr=57&session-id=c22e5539a334336c5352ae90fe7f8401&lang=en_us&oid=oid:1:1479524242&perc=0">Submitted to University of Melbourne on 2019-01-17</a>
+
+	</div>
+	<div>
+	<div class="number-l">44</div>
+	<p>< 1% match (student papers from 04-May-2014)</p>
+
+	<a style="color:green" href="/paperInfo.asp?r=38.0712900759971&svr=57&session-id=c22e5539a334336c5352ae90fe7f8401&lang=en_us&oid=oid:1:423565603&perc=0">Submitted to University of Melbourne on 2014-05-04</a>
+
+	</div>
+	<div>
+	<div class="number-l">45</div>
+	<p>< 1% match (student papers from 05-May-2014)</p>
+
+	<a style="color:blue" href="/paperInfo.asp?r=38.0712900759971&svr=57&session-id=c22e5539a334336c5352ae90fe7f8401&lang=en_us&oid=oid:1:423893024&perc=0">Submitted to University of Melbourne on 2014-05-05</a>
+
+	</div>
+	<div>
+	<div class="number-l">46</div>
+	<p>< 1% match (student papers from 01-May-2016)</p>
+
+	<a style="color:brown" href="/paperInfo.asp?r=38.0712900759971&svr=57&session-id=c22e5539a334336c5352ae90fe7f8401&lang=en_us&oid=oid:1:667994900&perc=0">Submitted to University of Melbourne on 2016-05-01</a>
+
+	</div>
+	<div>
+	<div class="number-l">47</div>
+	<p>< 1% match (student papers from 04-May-2015)</p>
+
+	<a style="color:#ff6600" href="/paperInfo.asp?r=38.0712900759971&svr=57&session-id=c22e5539a334336c5352ae90fe7f8401&lang=en_us&oid=oid:1:537358122&perc=0">Submitted to University of Melbourne on 2015-05-04</a>
+
+	</div>
+	<div>
+	<div class="number-l">48</div>
+	<p>< 1% match (student papers from 17-Jan-2019)</p>
+
+	<a style="color:#630000" href="/paperInfo.asp?r=38.0712900759971&svr=57&session-id=c22e5539a334336c5352ae90fe7f8401&lang=en_us&oid=oid:1:1479549951&perc=0">Submitted to University of Melbourne on 2019-01-17</a>
+
+	</div>
+	<div>
+	<div class="number-l">49</div>
+	<p>< 1% match (student papers from 17-Jan-2019)</p>
+
+	<a style="color:#009cff" href="/paperInfo.asp?r=38.0712900759971&svr=57&session-id=c22e5539a334336c5352ae90fe7f8401&lang=en_us&oid=oid:1:1479584633&perc=0">Submitted to University of Melbourne on 2019-01-17</a>
+
+	</div>
+	<div>
+	<div class="number-l">50</div>
+	<p>< 1% match (student papers from 07-Feb-2017)</p>
+
+	<a style="color:#31ff00" href="/paperInfo.asp?r=38.0712900759971&svr=57&session-id=c22e5539a334336c5352ae90fe7f8401&lang=en_us&oid=oid:1:767147826&perc=0">Submitted to University of Melbourne on 2017-02-07</a>
+
+	</div>
+	<div>
+	<div class="number-l">51</div>
+	<p>< 1% match (student papers from 16-Jan-2019)</p>
+
+	<a style="color:#330099" href="/paperInfo.asp?r=38.0712900759971&svr=57&session-id=c22e5539a334336c5352ae90fe7f8401&lang=en_us&oid=oid:1:1064443480&perc=0">Submitted to University of Melbourne on 2019-01-16</a>
+
+	</div>
+	<div>
+	<div class="number-l">52</div>
+	<p>< 1% match (student papers from 17-Jan-2019)</p>
+
+	<a style="color:#00cc99" href="/paperInfo.asp?r=38.0712900759971&svr=57&session-id=c22e5539a334336c5352ae90fe7f8401&lang=en_us&oid=oid:1:1064804772&perc=0">Submitted to University of Melbourne on 2019-01-17</a>
+
+	</div>
+	<div>
+	<div class="number-l">53</div>
+	<p>< 1% match (student papers from 08-Aug-2018)</p>
+
+	<a style="color:#ff0063" href="/paperInfo.asp?r=38.0712900759971&svr=57&session-id=c22e5539a334336c5352ae90fe7f8401&lang=en_us&oid=oid:1:988542093&perc=0">Submitted to Colorado Technical University Online on 2018-08-08</a>
+
+	</div>
+	<div>
+	<div class="number-l">54</div>
+	<p>< 1% match (student papers from 28-Jan-2018)</p>
+
+	<a style="color:#006331" href="/paperInfo.asp?r=38.0712900759971&svr=57&session-id=c22e5539a334336c5352ae90fe7f8401&lang=en_us&oid=oid:1:907387116&perc=0">Submitted to University of Melbourne on 2018-01-28</a>
+
+	</div>
+	<div>
+	<div class="number-l">55</div>
+	<p>< 1% match (student papers from 06-May-2013)</p>
+
+	<a style="color:#9966ff" href="/paperInfo.asp?r=38.0712900759971&svr=57&session-id=c22e5539a334336c5352ae90fe7f8401&lang=en_us&oid=oid:1:327285983&perc=0">Submitted to University of Melbourne on 2013-05-06</a>
+
+	</div>
+	<div>
+	<div class="number-l">56</div>
+	<p>< 1% match (student papers from 17-Jan-2019)</p>
+
+	<a style="color:#9c6331" href="/paperInfo.asp?r=38.0712900759971&svr=57&session-id=c22e5539a334336c5352ae90fe7f8401&lang=en_us&oid=oid:1:1064705574&perc=0">Submitted to University of Melbourne on 2019-01-17</a>
+
+	</div>
+	<div>
+	<div class="number-l">57</div>
+	<p>< 1% match (student papers from 05-May-2013)</p>
+
+	<a style="color:#ce0031" href="/paperInfo.asp?r=38.0712900759971&svr=57&session-id=c22e5539a334336c5352ae90fe7f8401&lang=en_us&oid=oid:1:327257104&perc=0">Submitted to University of Melbourne on 2013-05-05</a>
+
+	</div>
+	<div>
+	<div class="number-l">58</div>
+	<p>< 1% match (student papers from 28-Jan-2018)</p>
+
+	<a style="color:#cc9900" href="/paperInfo.asp?r=38.0712900759971&svr=57&session-id=c22e5539a334336c5352ae90fe7f8401&lang=en_us&oid=oid:1:907601476&perc=0">Submitted to University of Melbourne on 2018-01-28</a>
+
+	</div>
+	<div>
+	<div class="number-l">59</div>
+	<p>< 1% match (student papers from 21-Sep-2015)</p>
+
+	<a style="color:#63009c" href="/paperInfo.asp?r=38.0712900759971&svr=57&session-id=c22e5539a334336c5352ae90fe7f8401&lang=en_us&oid=oid:1:573302666&perc=0">Submitted to University of Melbourne on 2015-09-21</a>
+
+	</div>
+	<div>
+	<div class="number-l">60</div>
+	<p>< 1% match (student papers from 17-Jan-2019)</p>
+
+	<a style="color:#cc6600" href="/paperInfo.asp?r=38.0712900759971&svr=57&session-id=c22e5539a334336c5352ae90fe7f8401&lang=en_us&oid=oid:1:1064794651&perc=0">Submitted to University of Melbourne on 2019-01-17</a>
+
+	</div>
+	<div>
+	<div class="number-l">61</div>
+	<p>< 1% match (student papers from 28-Jan-2018)</p>
+
+	<a style="color:#cc0066" href="/paperInfo.asp?r=38.0712900759971&svr=57&session-id=c22e5539a334336c5352ae90fe7f8401&lang=en_us&oid=oid:1:907525442&perc=0">Submitted to University of Melbourne on 2018-01-28</a>
+
+	</div>
+	<div>
+	<div class="number-l">62</div>
+	<p>< 1% match (student papers from 09-Feb-2017)</p>
+
+	<a style="color:#33cc99" href="/paperInfo.asp?r=38.0712900759971&svr=57&session-id=c22e5539a334336c5352ae90fe7f8401&lang=en_us&oid=oid:1:768604155&perc=0">Submitted to University of Melbourne on 2017-02-09</a>
+
+	</div>
+	<div>
+	<div class="number-l">63</div>
+	<p>< 1% match (student papers from 19-Sep-2016)</p>
+
+	<a style="color:#336699" href="/paperInfo.asp?r=38.0712900759971&svr=57&session-id=c22e5539a334336c5352ae90fe7f8401&lang=en_us&oid=oid:1:706877103&perc=0">Submitted to University of Melbourne on 2016-09-19</a>
+
+	</div>
+	<div>
+	<div class="number-l">64</div>
+	<p>< 1% match (student papers from 05-May-2014)</p>
+
+	<a style="color:red" href="/paperInfo.asp?r=38.0712900759971&svr=57&session-id=c22e5539a334336c5352ae90fe7f8401&lang=en_us&oid=oid:1:423932942&perc=0">Submitted to University of Melbourne on 2014-05-05</a>
+
+	</div>
+	<div>
+	<div class="number-l">65</div>
+	<p>< 1% match (student papers from 06-May-2013)</p>
+
+	<a style="color:green" href="/paperInfo.asp?r=38.0712900759971&svr=57&session-id=c22e5539a334336c5352ae90fe7f8401&lang=en_us&oid=oid:1:327524721&perc=0">Submitted to University of Melbourne on 2013-05-06</a>
+
+	</div>
+	<div>
+	<div class="number-l">66</div>
+	<p>< 1% match (student papers from 09-Feb-2017)</p>
+
+	<a style="color:blue" href="/paperInfo.asp?r=38.0712900759971&svr=57&session-id=c22e5539a334336c5352ae90fe7f8401&lang=en_us&oid=oid:1:768592373&perc=0">Submitted to University of Melbourne on 2017-02-09</a>
+
+	</div>
+	<div id="last">
+	<div class="number-l">67</div>
+	<p>< 1% match (student papers from 05-May-2014)</p>
+
+	<a style="color:brown" href="/paperInfo.asp?r=38.0712900759971&svr=57&session-id=c22e5539a334336c5352ae90fe7f8401&lang=en_us&oid=oid:1:423667556&perc=0">Submitted to University of Melbourne on 2014-05-05</a>
+
+	</div>
+
+</div>
+
+
+
+<div class="divider">paper text:</div>
+<div id="body">
+<a href="javascript:openDSC(763801343, 1, '9142');" onmouseover="doRollover(16);" onmouseout="undoRollover(16);" id="9142" name="16" style="color:#cc9900" class="#cc9900"><span class="b-ref">16</span>1. Executive Summary<span> The </span>Overhill winery is a medium-sized boutique winery</a> that sells 3 types (7 brands) of wine. In order to achieve future sales growth, <a href="javascript:openDSC(763924115, 1, '15419');" onmouseover="doRollover(18);" onmouseout="undoRollover(18);" id="15419" name="18" style="color:#cc6600" class="#cc6600"><span class="b-ref">18</span>Sane Yardman, the managing director of<span> the </span>Overhill winery,</a> believes that the winery needs better management and <a href="javascript:openDSC(423735044, 1, '18936');" onmouseover="doRollover(28);" onmouseout="undoRollover(28);" id="18936" name="28" style="color:#009cff" class="#009cff"><span class="b-ref">28</span>a better understanding of sales trends. The data warehouse</a> can provide high-quality and consistent data from various data sources. Managers can quickly access many data sources and can access <a href="javascript:openDSC(1064319047, 1, '30104');" onmouseover="doRollover(23);" onmouseout="undoRollover(23);" id="30104" name="23" style="color:green" class="green"><span class="b-ref">23</span>a large amount of historical data in the data warehouse.<span> This </span>can</a> help managers no longer need <a href="javascript:openDSC(423677199, 1, '13934');" onmouseover="doRollover(19);" onmouseout="undoRollover(19);" id="13934" name="19" style="color:#cc0066" class="#cc0066"><span class="b-ref">19</span>to rely on limited Data<span> and </span>their intuition to make<span> business </span>decisions.</a> This report focuses on Overhill winery, explaining the <a href="javascript:openDSC(1479405225, 1, '1407');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="1407" name="1" style="color:red" class="red"><span class="b-ref">1</span>importance and feasibility of establishing<span> a </span>data warehouse.<span> Based on </span>the</a> winery's original <a href="javascript:openDSC(424011608, 1, '14815');" onmouseover="doRollover(5);" onmouseout="undoRollover(5);" id="14815" name="5" style="color:#ff6600" class="#ff6600"><span class="b-ref">5</span>the production system and the merchant sales system, a</a> snowflake schema was selected to establish a suitable data warehouse for Overhill winery. This <a href="javascript:openDSC(1479584633, 1, '41568');" onmouseover="doRollover(49);" onmouseout="undoRollover(49);" id="41568" name="49" style="color:#009cff" class="#009cff"><span class="b-ref">49</span>report describes the<span> establishment </span>of the<span> Overhill winery </span>data warehouse<span> in five parts. </span>The</a> executive summary is the first part, which briefly introduces key information and suggestions, and lists the report structure. The next part is the relevant content of the data warehouse, which covers the specific concepts <a href="javascript:openDSC(763644973, 1, '9708');" onmouseover="doRollover(35);" onmouseout="undoRollover(35);" id="9708" name="35" style="color:#9c6331" class="#9c6331"><span class="b-ref">35</span>of the data warehouse and the<span> necessity and benefits </span>of the data warehouse for the</a> enterprise. After that, the <a href="javascript:openDSC(907632014, 1, '19493');" onmouseover="doRollover(3);" onmouseout="undoRollover(3);" id="19493" name="3" style="color:blue" class="blue"><span class="b-ref">3</span>third part is<span> about </span>the<span> specific </span>design of the<span> Overhill winery </span>data warehouse. This</a> report designed a snowflake schema <a href="javascript:openDSC(423667556, 1, '30475');" onmouseover="doRollover(67);" onmouseout="undoRollover(67);" id="30475" name="67" style="color:brown" class="brown"><span class="b-ref">67</span>data warehouse for<span> Overhill </span>winery and<span> explained </span>the</a> content and details of related tables <a href="javascript:openDSC(327285983, 1, '3938');" onmouseover="doRollover(55);" onmouseout="undoRollover(55);" id="3938" name="55" style="color:#9966ff" class="#9966ff"><span class="b-ref">55</span>in the data warehouse. The main<span> content </span>of<span> the fourth part </span>is</a> to show Sane Yardman on <a href="javascript:openDSC(763911370, 1, '13461');" onmouseover="doRollover(40);" onmouseout="undoRollover(40);" id="13461" name="40" style="color:#cc0066" class="#cc0066"><span class="b-ref">40</span>how to use the data warehouse to solve<span> a series of </span>problems<span> he cares about. </span>The</a> last part is the appendix, which includes the <a href="javascript:openDSC(1479405225, 1, '1417');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="1417" name="1" style="color:red" class="red"><span class="b-ref">1</span>data dictionary, SQL statements, and work breakdown. 2. Introduction to data warehousing</a> Definition <a href="javascript:openDSC(88940645, 2, '57371');" onmouseover="doRollover(32);" onmouseout="undoRollover(32);" id="57371" name="32" style="color:#ff0063" class="#ff0063"><span class="b-ref">32</span>Data warehouse is a<span> subject </span>-oriented, integrated, relatively stable, data collection that reflects historical changes.<span> A data warehouse </span>is</a> not simply a collection of information from different databases. It is a large-scale application system. The data warehouse is based on a large-scale management system, and in this system stores comprehensive data obtained from all the business databases of the enterprise. Through these comprehensive data, users are provided with useful information after processing, and users can analyze it (Golfarelli,2009). The <a href="javascript:openDSC(594887454, 2, '55027');" onmouseover="doRollover(20);" onmouseout="undoRollover(20);" id="55027" name="20" style="color:#33cc99" class="#33cc99"><span class="b-ref">20</span>data warehouse can be understood<span> in </span>two aspects. The data</a> in the <a href="javascript:openDSC(594887454, 2, '55031');" onmouseover="doRollover(20);" onmouseout="undoRollover(20);" id="55031" name="20" style="color:#33cc99" class="#33cc99"><span class="b-ref">20</span>data warehouse is integrated<span> into </span>multiple heterogeneous data sources.<span> The integrated data </span>is<span> grouped </span>according to the theme.<span> The </span>data<span> placed in </span>the data</a> warehouse is generally not modified and contains historical data (N. Nataraj,2014). On the other hand, the data warehouse is an analysis-oriented data processing method, which focuses on supporting decision-making rather than dealing with daily business. Necessity With the development of digital technologies and the expansion of demand for data in recent years, it is much more difficult to manage data than before. The main purpose of business database is designed for storing data and basic <a href="javascript:openDSC(1064746327, 1, '13057');" onmouseover="doRollover(9);" onmouseout="undoRollover(9);" id="13057" name="9" style="color:#330099" class="#330099"><span class="b-ref">9</span>operations. Although it can be used for<span> some business </span>analysis, it<span> requires </span>a lot of</a> readjustment for that. Besides, it still has many <a href="javascript:openDSC(1064746327, 1, '13060');" onmouseover="doRollover(9);" onmouseout="undoRollover(9);" id="13060" name="9" style="color:#330099" class="#330099"><span class="b-ref">9</span>problems such as complex<span> data structures, </span>data<span> mess, </span>lack of history</a> and slowness for large-scale queries. Gradually, the common business database no longer meets managers’ needs. This is why data warehousing was created. Data warehousing is analysis-oriented and focuses on solving the drawbacks of analysis by business database. For more than storing data and recording history, managers are eager to pick the key information and extract them for decision-making. Those needs for strategic data information motivate the establishment of data warehousing in a great extent (Qin, 2012). Additionally, the granularity of operations is on all integrated data level. It can be accessed easily and provides fast queries for their users. That makes data warehousing more attractive and popular in business analysis. Benefits The major benefit of data warehousing is to help <a href="javascript:openDSC(763847860, 1, '8077');" onmouseover="doRollover(33);" onmouseout="undoRollover(33);" id="8077" name="33" style="color:#006331" class="#006331"><span class="b-ref">33</span>managers and executives to make<span> strategic </span>decisions<span> significantly. </span>A</a> data warehousing can provide enhanced business intelligence. They <a href="javascript:openDSC(25201899, 2, '57364');" onmouseover="doRollover(22);" onmouseout="undoRollover(22);" id="57364" name="22" style="color:red" class="red"><span class="b-ref">22</span>will no longer<span> have </span>to make business decisions based on limited data<span> source </span>or their<span> intuition. </span>Data<span> warehousing </span>can be applied</a> in market <a href="javascript:openDSC(25201899, 2, '57369');" onmouseover="doRollover(22);" onmouseout="undoRollover(22);" id="57369" name="22" style="color:red" class="red"><span class="b-ref">22</span>segmentation, inventory management, financial management,<span> sales </span>and</a> other business processes (Donald P, 1999). Another significant <a href="javascript:openDSC(907632014, 1, '19500');" onmouseover="doRollover(3);" onmouseout="undoRollover(3);" id="19500" name="3" style="color:blue" class="blue"><span class="b-ref">3</span>advantage is that data warehousing<span> can improve </span>the quality<span> and consistency </span>of data.<span> To establish a </span>data</a> warehousing, the data from many other data source systems need to be transferred to a uniform data format. Due to the standardization of data from different departments, data warehousing provides more accurate data and accuracy is the basis of business strategic decisions. <a href="javascript:openDSC(1479405225, 1, '1427');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="1427" name="1" style="color:red" class="red"><span class="b-ref">1</span>3. Design of the data warehouse In this section, we will</a> introduce and analyze briefly this business case and discuss detailly how we design the data warehouse. Additionally, the fact table <a href="javascript:openDSC(1479405225, 1, '1431');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="1431" name="1" style="color:red" class="red"><span class="b-ref">1</span>and dimension tables are introduced<span> separately below. </span>Business case introduction and analysis</a><a href="javascript:openDSC(763801343, 1, '9144');" onmouseover="doRollover(16);" onmouseout="undoRollover(16);" id="9144" name="16" style="color:#cc9900" class="#cc9900"><span class="b-ref">16</span>Overhill Winery is a medium-sized boutique winery.<span> There </span>are</a> seven types of wines in total. The winery is in charge of <a href="javascript:openDSC(706877103, 1, '18614');" onmouseover="doRollover(63);" onmouseout="undoRollover(63);" id="18614" name="63" style="color:#336699" class="#336699"><span class="b-ref">63</span>growing grapes, producing<span> wines </span>and selling<span> them. The </span>wine</a> products <a href="javascript:openDSC(763842825, 1, '185');" onmouseover="doRollover(21);" onmouseout="undoRollover(21);" id="185" name="21" style="color:#336699" class="#336699"><span class="b-ref">21</span>are sold locally in Melbourne, interstate in Australia and internationally in the UK.</a> The managing director is seeking more further growth based on the grammatic growth in the past three years. Currently, <a href="javascript:openDSC(763801343, 1, '9152');" onmouseover="doRollover(16);" onmouseout="undoRollover(16);" id="9152" name="16" style="color:#cc9900" class="#cc9900"><span class="b-ref">16</span>there are two<span> separate </span>information systems<span> applied </span>in<span> the business, </span>one is<span> to manage </span>production<span> and </span>the</a> other one is for sales to wine merchants. However, that causes a range of issues about different data formats and database systems. In order to keep a rapid growth, the managing director has to make decisions based on the extracted key information instead of experience and intuition. For this purpose, <a href="javascript:openDSC(537358122, 1, '51652');" onmouseover="doRollover(47);" onmouseout="undoRollover(47);" id="51652" name="47" style="color:#ff6600" class="#ff6600"><span class="b-ref">47</span>a data warehouse is<span> needed </span>to integrate<span> all different </span>data from<span> two systems </span>and</a> to offer valuable information about customers, sales agents and sales time periods and markets. Overall Design Figure 3.1 design of dimension model As shown in figure 3.1, <a href="javascript:openDSC(1064319047, 1, '30107');" onmouseover="doRollover(23);" onmouseout="undoRollover(23);" id="30107" name="23" style="color:green" class="green"><span class="b-ref">23</span>the data warehouse model<span> for Overhill winery </span>is designed as a<span> snowflake </span>schema to help</a> Sane Yardman better understand sales trends and solve the problems that companies are facing. The data warehouse is composed of 7 tables. At the center is <a href="javascript:openDSC(1479530412, 1, '17462');" onmouseover="doRollover(31);" onmouseout="undoRollover(31);" id="17462" name="31" style="color:#00cc99" class="#00cc99"><span class="b-ref">31</span>a fact table<span> called </span>Sale,<span> and </span>there are 5 dimension tables<span> connected to it, </span>which are<span> called market, </span>time,<span> Sales_agent, </span>customer, and product.</a> There is also a dimension table named production connected to <a href="javascript:openDSC(768592373, 1, '23283');" onmouseover="doRollover(66);" onmouseout="undoRollover(66);" id="23283" name="66" style="color:blue" class="blue"><span class="b-ref">66</span>the product table. The<span> details about each </span>table<span> and </span>the</a> relationship between the tables are described below. Fact table The Sale <a href="javascript:openDSC(907632014, 1, '19508');" onmouseover="doRollover(3);" onmouseout="undoRollover(3);" id="19508" name="3" style="color:blue" class="blue"><span class="b-ref">3</span>table is the fact table<span> in the snowflake </span>schema,<span> and </span>it is the<span> center </span>table<span> around other dimensions. </span>The<span> Sale </span>table</a> mainly contains sales data of Overhill winery, which is also the business process that Overhill winery focuses on. There are 10 attributes in the Sale table. SalesID <a href="javascript:openDSC(1064443480, 1, '12347');" onmouseover="doRollover(51);" onmouseout="undoRollover(51);" id="12347" name="51" style="color:#330099" class="#330099"><span class="b-ref">51</span>is the<span> only </span>primary key in the<span> Sale </span>table.<span> A row in </span>the</a> Sale table indicates that a specific customer or agent bought a specific product within a specific time. These products sold to specific customers or agents are sold to a specific market for Overhill winery. This corresponds to 5 foreign keys in the table, namely CustomerRecord, AgentRecord, TimeID, ProductID, and MarketID. The remaining other attributes <a href="javascript:openDSC(907387116, 1, '28115');" onmouseover="doRollover(54);" onmouseout="undoRollover(54);" id="28115" name="54" style="color:#006331" class="#006331"><span class="b-ref">54</span>in the fact table are<span> measures. </span>Unit_Sales<span> indicates the </span>sales</a> volume of the product, SalePrice indicates the total cost of the customer in the transaction, Line indicates the order line, and Margin is referring to the profit from this transaction. Dimension tables The Customer dimension <a href="javascript:openDSC(907632014, 1, '19504');" onmouseover="doRollover(3);" onmouseout="undoRollover(3);" id="19504" name="3" style="color:blue" class="blue"><span class="b-ref">3</span>table is one of the dimensions<span> of Sale fact. </span>The relevant<span> basic information </span>of</a> customers is recorded in this table, such as CustomerID, Firstname, Lastname, and addresses. Key customers can be analyzed from the following aspects. First of all, the proportion of products purchased by men and women should be a direction of analyzing the main customers, so the gender attribute is added. At the same time, the age range of the customer is also a direction that should be paid attention to. We use the DateOfBirth and GroupAge attributes to describe it. The value of Group Age is divided into three intervals <a href="javascript:openDSC(3819309333, 3722, '65981');" onmouseover="doRollover(29);" onmouseout="undoRollover(29);" id="65981" name="29" style="color:#31ff00" class="#31ff00"><span class="b-ref">29</span>less than 30 years old, between 30 and 60 years old, and<span> over </span>60 years old.</a> It is obtained by subtracting the value of the DateOfBirth attribute from the value <a href="javascript:openDSC(423677199, 1, '13942');" onmouseover="doRollover(19);" onmouseout="undoRollover(19);" id="13942" name="19" style="color:#cc0066" class="#cc0066"><span class="b-ref">19</span>of the<span> time </span>in the Sale fact table.</a> Finally, the area where customers live is also a direction that needs attention, by adding Postcode and Suburb. Because the customer's information may change, <a href="javascript:openDSC(1064765494, 1, '7509');" onmouseover="doRollover(15);" onmouseout="undoRollover(15);" id="7509" name="15" style="color:#ce0031" class="#ce0031"><span class="b-ref">15</span>it is necessary to record<span> both </span>the<span> new </span>data<span> of </span>the</a> customer's change and the historical data of the customer, so add Customer_Recorder <a href="javascript:openDSC(1479524242, 1, '52322');" onmouseover="doRollover(43);" onmouseout="undoRollover(43);" id="52322" name="43" style="color:red" class="red"><span class="b-ref">43</span>as the surrogate key to implement, and<span> it is also </span>the<span> primary key of </span>the</a> Customer dimension table. For search convenience, set up CustomerID, GroupAge and Postcode as indexes. The Time dimension table is one of the dimensions of Sale fact. The problem that companies need to solve is <a href="javascript:openDSC(1479549951, 1, '14008');" onmouseover="doRollover(48);" onmouseout="undoRollover(48);" id="14008" name="48" style="color:#630000" class="#630000"><span class="b-ref">48</span>which time periods are the most profitable. So,</a><a href="javascript:openDSC(1479405225, 1, '1448');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="1448" name="1" style="color:red" class="red"><span class="b-ref">1</span>for a<span> specific </span>date, we need to know which day of<span> the </span>week, which month, which quarter, which<span> fiscal quarter, </span>and which year</a> it belongs to. Which week of the year it is, whether it belongs to the first half or the second half. Therefore, a total of 8 attribute implementations have been added, of which TimeID <a href="javascript:openDSC(423735044, 1, '18945');" onmouseover="doRollover(28);" onmouseout="undoRollover(28);" id="18945" name="28" style="color:#009cff" class="#009cff"><span class="b-ref">28</span>is the primary key of The Time dimension</a> table, followed by DayOfWeek, Month, Season, FinQuater, Year, WeekNo, and HalfYear. The 7 attributes correspond to the above description. The Sales_agent dimension table is one of the dimensions of Sale fact. Sales agents are the main sales objects of Overhill winery. One issue that also needs to be analyzed is Who are the key sales agents. So, the basic information of the agents recorded in the table includes AgentID, Agent’Name, and CommissionRate. At the same time, we can analyze the importance of agents from different regions by adding the AgentArea attribute. For the change of Agent, we also need to record new data and historical data, so Sales_agent_record is set as the agent key, and <a href="javascript:openDSC(667994900, 1, '19850');" onmouseover="doRollover(46);" onmouseout="undoRollover(46);" id="19850" name="46" style="color:brown" class="brown"><span class="b-ref">46</span>it is also the<span> primary </span>key of The<span> Sales_agent </span>dimension table.</a> For quick retrieval, we set AgentID and AgentArea as indexes. The <a href="javascript:openDSC(767147826, 1, '17169');" onmouseover="doRollover(50);" onmouseout="undoRollover(50);" id="17169" name="50" style="color:#31ff00" class="#31ff00"><span class="b-ref">50</span>Market dimension is a dimension<span> table </span>of the<span> fact </span>table.</a> This table records the MarketID, the MarketName and the MarketRegion. Currently, <a href="javascript:openDSC(763821046, 1, '8973');" onmouseover="doRollover(36);" onmouseout="undoRollover(36);" id="8973" name="36" style="color:#ce0031" class="#ce0031"><span class="b-ref">36</span>there are three markets,<span> those are </span>Victoria, The rest of Australia and International.<span> As </span>the</a> director requires, this dimension table shows which market each <a href="javascript:openDSC(706812764, 1, '44202');" onmouseover="doRollover(41);" onmouseout="undoRollover(41);" id="44202" name="41" style="color:#33cc99" class="#33cc99"><span class="b-ref">41</span>unit sales and dollar sales<span> belong to </span>for<span> every month. </span>The market<span> may change </span>in the</a> future, so there should be a surrogate key called Market_sIDto present changes. For retrieving concern, the index is added <a href="javascript:openDSC(763785939, 1, '21242');" onmouseover="doRollover(38);" onmouseout="undoRollover(38);" id="21242" name="38" style="color:#63009c" class="#63009c"><span class="b-ref">38</span>in the<span> MarketID. </span>The Product dimension<span> table </span>is<span> to record all </span>the product<span> relevant information. </span>In this<span> table, </span>the</a> basic information of product is recorded, covering their original id, descriptions, which group they belong to, the cost to produce them, unit price which is also called advised price and the real <a href="javascript:openDSC(1064705574, 1, '36773');" onmouseover="doRollover(56);" onmouseout="undoRollover(56);" id="36773" name="56" style="color:#9c6331" class="#9c6331"><span class="b-ref">56</span>sale price.<span> According </span>to the<span> real sale </span>price and the cost,</a> the margin for each product can be calculated. In order to retrieve, the index is added to the column ProductID. The Production dimension table is to record the information about producing wine process. The ProductionCode is labelled as the primary key in this table. It has two attributes, the Volume is to describe the yearly yield of wines, the YearOfProduction is to record the year of each production. The Production dimension table has a hierarchical relationship with Product dimension table. The quantity of production must be always greater than the quantity of product. So, the ProductionCode in <a href="javascript:openDSC(423565603, 1, '3418');" onmouseover="doRollover(44);" onmouseout="undoRollover(44);" id="3418" name="44" style="color:green" class="green"><span class="b-ref">44</span>this table is a foreign key<span> in </span>Product dimension table.</a> For retrieving purpose, the index in this table is added in the ProductionCode. 4. Address business problems <a href="javascript:openDSC(1479405225, 1, '1500');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="1500" name="1" style="color:red" class="red"><span class="b-ref">1</span>Which products are the most profitable? Table Name Retrieved Data<span> Sale Unit </span>_Sales,<span> SalePrice </span>,Margin,<span> TimeID </span>,ProductID</a> Time TimeID, Year, Season, Month <a href="javascript:openDSC(1479405225, 1, '1508');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="1508" name="1" style="color:red" class="red"><span class="b-ref">1</span>Product ProductID,<span> Cost, </span>Description,<span> Group </span>Table 4.<span> 1 </span>Retrieved Data for deciding<span> most profitable product </span>The</a> steps for grouping most profitable product: 1. Decide the time period Choose a time period that decision maker would like to check and select the corresponding time period on Time table. <a href="javascript:openDSC(423677199, 1, '13938');" onmouseover="doRollover(19);" onmouseout="undoRollover(19);" id="13938" name="19" style="color:#cc0066" class="#cc0066"><span class="b-ref">19</span>For example, if<span> the director </span>wants to<span> check </span>the sales<span> on April </span>of</a> 2019, then select rows where ‘Month’ = ‘4’ and ‘Year’ = ‘2019’. <a href="javascript:openDSC(1479405225, 1, '1483');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="1483" name="1" style="color:red" class="red"><span class="b-ref">1</span>2. Select the sales<span> information during </span>that time period<span> Based on </span>the result of step1, select the<span> corresponding </span>rows<span> of Sale fact </span>table,</a> where TimeID equals the results <a href="javascript:openDSC(1479405225, 1, '1491');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="1491" name="1" style="color:red" class="red"><span class="b-ref">1</span>of step1. 3. Group<span> by product </span>and calculate the<span> relative sale </span>information</a> Based on the result of step2, group all information by ProductID and sum up all required sale information respectively. Therefore, that forms a new table that can be called Key_Products. After that, each product has its own sale <a href="javascript:openDSC(907628023, 1, '44470');" onmouseover="doRollover(39);" onmouseout="undoRollover(39);" id="44470" name="39" style="color:#cc6600" class="#cc6600"><span class="b-ref">39</span>information such as unit sales, dollar sales and margin.<span> 4. Sort </span>the</a> sales information After grouping them by ProductID, sort them in descending order by any one of them, <a href="javascript:openDSC(1479405225, 1, '1494');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="1494" name="1" style="color:red" class="red"><span class="b-ref">1</span>unit sales, dollar sales or margin.<span> Then </span>the top</a> one is what the director looks for on that order. 5. Find out more information about the key product Join Key_Product with Product table, then we will get the detailed wine type (called Group Product table) and the base product (called Description in Product table) for the key product. The final provided information as below: Base product <a href="javascript:openDSC(327257104, 1, '36420');" onmouseover="doRollover(57);" onmouseout="undoRollover(57);" id="36420" name="57" style="color:#ce0031" class="#ce0031"><span class="b-ref">57</span>Wine type Unit sales Dollar sales Cost Margin</a><a href="javascript:openDSC(1479405225, 1, '1456');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="1456" name="1" style="color:red" class="red"><span class="b-ref">1</span>Who are the key customers? Table Name Retrieved Data<span> Sale Unit </span>_Sales,<span> SalePrice </span>,Margin,<span> TimeID </span>,Customer_<span> Record,ProductID Costumer </span>CustomerID,</a> GroupAge,Postcode Time TimeID, Year, <a href="javascript:openDSC(1479405225, 1, '1504');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="1504" name="1" style="color:red" class="red"><span class="b-ref">1</span>Season Product ProductID,<span> Cost, </span>Description,<span> Group </span>Table 4.2 Retrieved Data for deciding key<span> customers </span>The</a> steps for grouping <a href="javascript:openDSC(1479405225, 1, '1480');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="1480" name="1" style="color:red" class="red"><span class="b-ref">1</span>key customers: 1. Decide the time period and<span> check </span>the</a> productID for each product. Choose a time period that the decision-maker would like to check and select the corresponding time period on the Time dimension table. Taking the ‘winter of 2012’ for an example, select the ‘Year’ = ‘2012’ and ‘Season’ = ‘winter’ in the Time table. 2. Select the sales information during that period. Based on the results of step1, select the corresponding rows of Sale, where TimeID equals the results of that in Time table. After that, select the productID which the director is looking for. 3. Group by customers and calculate the relative sale information Based on the results of step2, group all data by customers. For each customer, calculate the <a href="javascript:openDSC(423893024, 1, '1366');" onmouseover="doRollover(45);" onmouseout="undoRollover(45);" id="1366" name="45" style="color:blue" class="blue"><span class="b-ref">45</span>unit sales, dollar sales, cost and margin<span> by summing up </span>Unit_Sales,</a> SalePrice, Cost <a href="javascript:openDSC(907525442, 1, '51510');" onmouseover="doRollover(61);" onmouseout="undoRollover(61);" id="51510" name="61" style="color:#cc0066" class="#cc0066"><span class="b-ref">61</span>and Margin<span> respectively </span>in<span> that </span>time period,<span> which </span>is</a> a new table called Key_Customers. 4. Sort the results from the last step. <a href="javascript:openDSC(1064794651, 1, '21602');" onmouseover="doRollover(60);" onmouseout="undoRollover(60);" id="21602" name="60" style="color:#cc6600" class="#cc6600"><span class="b-ref">60</span>Sort the results<span> from step3 </span>in descending order</a> by any one of them, <a href="javascript:openDSC(1479405225, 1, '1530');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="1530" name="1" style="color:red" class="red"><span class="b-ref">1</span>unit sales, dollar sales or margin. The first</a> customer could be considered as <a href="javascript:openDSC(1479405225, 1, '1498');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="1498" name="1" style="color:red" class="red"><span class="b-ref">1</span>key customers. 5. Find out<span> the information about </span>key customers</a> for each product. Join Key_Customers with Customer table and Product table. Then, group them by GroupAge or Postcode so that we can reckon that the rough age and place <a href="javascript:openDSC(423932942, 1, '4064');" onmouseover="doRollover(64);" onmouseout="undoRollover(64);" id="4064" name="64" style="color:red" class="red"><span class="b-ref">64</span>of the key customers<span> for </span>each product.</a> The final provided information as below: CustomerID Description (wine type) Group (base product) <a href="javascript:openDSC(1479405225, 1, '1516');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="1516" name="1" style="color:red" class="red"><span class="b-ref">1</span>Unit Sales Dollar sales<span> Cost </span>Margin<span> GroupAge Postcode </span>Which<span> market </span>is the most profitable? Table Name Retrieved Data<span> Sale TimeID, Unit </span>_Sales,</a> SalePrice Time TimeID, Month, Year Market Market_sID, MarketID, MarketName <a href="javascript:openDSC(1479405225, 1, '1525');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="1525" name="1" style="color:red" class="red"><span class="b-ref">1</span>Table 4.3 Retrieved Data for deciding most profitable<span> market </span>The<span> steps for grouping </span>the<span> most profitable market: </span>1.</a> Decided to year Assuming that the previous year is 2019, select all TimeIDs with ‘Year’ = ‘2019’ from the Time dimension table as the new set. 2. Add month condition Add a new condition of Month = 1 to the set returned in step 1, to obtain a new TimeID set. 3. Select the sales information during that period Connect the result in Step 2 with the Sale fact table and filter out some rows <a href="javascript:openDSC(327524721, 1, '8950');" onmouseover="doRollover(65);" onmouseout="undoRollover(65);" id="8950" name="65" style="color:green" class="green"><span class="b-ref">65</span>from the Sale fact table<span> according to </span>the</a> result in Step 2. Then group by MarketID. 4. Calculate <a href="javascript:openDSC(327582194, 1, '5615');" onmouseover="doRollover(7);" onmouseout="undoRollover(7);" id="5615" name="7" style="color:#009cff" class="#009cff"><span class="b-ref">7</span>unit sales and dollar sales<span> in the same </span>market for<span> one </span>month<span> in </span>the<span> same </span>year<span> In </span>the<span> result </span>of</a> step 3, based on the same Market_sID, the values of the Unit_Sales and SalePrice attributes of the same Market_sID are summed. 5. Add the corresponding Market Name According to the result of step 4 and the Market_ID, join the Market dimension table to the result of step 4, and get the MarketName. 6. Find the most profitable market The Unit_Sales or SalePrice attributes of the table generated in step 5 are sorted from large to small (the summed values). The result is called <a href="javascript:openDSC(763924115, 1, '15434');" onmouseover="doRollover(18);" onmouseout="undoRollover(18);" id="15434" name="18" style="color:#cc6600" class="#cc6600"><span class="b-ref">18</span>the most profitable market table,<span> and </span>the most profitable market</a> is obtained. If you want to change the year and month, change it in the first or second step and search again. The final search result should be displayed as: MarketID MarketName Year Month Unit_Sales SalePrice <a href="javascript:openDSC(1479405225, 1, '1540');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="1540" name="1" style="color:red" class="red"><span class="b-ref">1</span>Which time periods are the most profitable? Table Name Retrieved Data<span> Sale TimeID, Unit </span>_Sales,<span> SalePrice, </span>Margin</a> Time TimeID, Month, Season, FinQuater, Year, WeekNo <a href="javascript:openDSC(1479405225, 1, '1543');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="1543" name="1" style="color:red" class="red"><span class="b-ref">1</span>Table 4.4 Retrieved Data for deciding most profitable time periods The<span> steps </span>to<span> find </span>the</a> most profitable time period: 1. Join <a href="javascript:openDSC(907601476, 1, '16632');" onmouseover="doRollover(58);" onmouseout="undoRollover(58);" id="16632" name="58" style="color:#cc9900" class="#cc9900"><span class="b-ref">58</span>Time dimension table<span> to </span>Sale fact table<span> According to </span>the</a> TimeID, <a href="javascript:openDSC(1479508022, 1, '746');" onmouseover="doRollover(30);" onmouseout="undoRollover(30);" id="746" name="30" style="color:#330099" class="#330099"><span class="b-ref">30</span>join the<span> Time </span>dimension table<span> to </span>the Sale fact table,</a> so that you can get the values of Month, Season, FinQuater, Year, WeekNo in the Time table. 2. Group and merge based on time period Group according to the retrieved time period. Here it is assumed that the retrieved time period is month. In the result obtained in step 1, the three columns of Unit_Sales, SalePrice, and Margin with the same Month attribute value are accumulated. 3. Find the most profitable <a href="javascript:openDSC(1479405225, 1, '1489');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="1489" name="1" style="color:red" class="red"><span class="b-ref">1</span>time period According to the result of<span> step 2, </span>select</a> any one of Unit_Sales, SalePrice, and Margin to sort from the largest to the smallest (the summed values), and we will get the new table as the most profitable time period table, and we will get the <a href="javascript:openDSC(1479508022, 1, '754');" onmouseover="doRollover(30);" onmouseout="undoRollover(30);" id="754" name="30" style="color:#330099" class="#330099"><span class="b-ref">30</span>most profitable time period<span> . If you </span>need to<span> retrieve other </span>time</a> periods, you only need to group them <a href="javascript:openDSC(1064804772, 1, '33953');" onmouseover="doRollover(52);" onmouseout="undoRollover(52);" id="33953" name="52" style="color:#00cc99" class="#00cc99"><span class="b-ref">52</span>according to different time periods (Month, Season,<span> FinQuater, </span>Year,</a> WeekNo) in step 2. The final search result should be displayed as: WeekNo /Month/Season/FinQuater/YearUnit_Sales SalePrice Margin <a href="javascript:openDSC(1479405225, 1, '1461');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="1461" name="1" style="color:red" class="red"><span class="b-ref">1</span>Who are the key<span> sales agents? </span>Table Name Retrieved Data<span> Sale </span>Sales_<span> agent_Record </span>，Margin,</a> Sales_agent Sales_agent_Record, AgentID, AgentName, CommissionRate <a href="javascript:openDSC(1479405225, 1, '1475');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="1475" name="1" style="color:red" class="red"><span class="b-ref">1</span>Table 4.<span> 4 </span>Retrieved Data for deciding key<span> sale agents </span>The<span> steps for grouping </span>the Key<span> sales agents: </span>1.</a> Join Sales_agent dimension table to Sale fact table According to the same Sales_agent_Record, join the Sales_agent dimension table to the Sale Fact table, you can get the corresponding AgentID, AgentName, and CommissionRate values from the Sales_agent dimension table. 2. Group and merge based on AgentID According to the result of step 1, the results of step 1 are grouped according to the same AgentID value. And add the value of Margin according to the same AgentID. 3. Find out the information about key sale agents Based on the result of step 2, sort the values according to the Margin property from large to small, and get Key sale agents table. We can retrieve the required Key sale agents. The final search result should be displayed as: AgentID AgentName CommissionRate Margin Words count:3175 <a href="javascript:openDSC(1064788642, 1, '36854');" onmouseover="doRollover(26);" onmouseout="undoRollover(26);" id="36854" name="26" style="color:#ff6600" class="#ff6600"><span class="b-ref">26</span>Appendix 1 – Data Dictionary<span> Sale </span>Fact Table Attribute Description Source SalesID<span> A </span>unique<span> identification code </span>for an order<span> The Sales Order </span>attribute<span> in Sale </span>table<span> Unit_Sales The </span>number of<span> each product </span>in</a> each sale The <a href="javascript:openDSC(1479585123, 1, '11925');" onmouseover="doRollover(42);" onmouseout="undoRollover(42);" id="11925" name="42" style="color:#336699" class="#336699"><span class="b-ref">42</span>Quantity in Sale table<span> SalePrice </span>The total amount of<span> money </span>a</a> customer needs to spend on <a href="javascript:openDSC(1064746327, 1, '13083');" onmouseover="doRollover(9);" onmouseout="undoRollover(9);" id="13083" name="9" style="color:#330099" class="#330099"><span class="b-ref">9</span>a product<span> in </span>a sale The Sale Price in<span> Sale </span>table</a><a href="javascript:openDSC(907632014, 1, '19533');" onmouseover="doRollover(3);" onmouseout="undoRollover(3);" id="19533" name="3" style="color:blue" class="blue"><span class="b-ref">3</span>Line One transaction identifies one customer bought different product<span> The </span>Line attribute in<span> Sale </span>table<span> Margin </span>The</a> profit made on <a href="javascript:openDSC(1064746327, 1, '13089');" onmouseover="doRollover(9);" onmouseout="undoRollover(9);" id="13089" name="9" style="color:#330099" class="#330099"><span class="b-ref">9</span>a product<span> in </span>a sale The<span> Margin arrtibue </span>in<span> Sale </span>table, the</a> value is SalePrice minus Unit_Sales times Cost TimeID A unique identification code for a time The TimeID attribute in Sale fact table, from Time dimension table. Sales_agent_Record A unique identification code r for an agent The Sales_agent_Record <a href="javascript:openDSC(573302666, 1, '13019');" onmouseover="doRollover(59);" onmouseout="undoRollover(59);" id="13019" name="59" style="color:#63009c" class="#63009c"><span class="b-ref">59</span>attribute in Sale fact table,<span> from Sales_agent </span>dimension table.</a> Customer_Record A unique identification code for a customer The Customer_Record in attribute Sale fact table, from <a href="javascript:openDSC(424011608, 1, '14860');" onmouseover="doRollover(5);" onmouseout="undoRollover(5);" id="14860" name="5" style="color:#ff6600" class="#ff6600"><span class="b-ref">5</span>Customer dimension table.<span> ProductID </span>A unique<span> identification code </span>for a product The</a> ProductID <a href="javascript:openDSC(763847860, 1, '8092');" onmouseover="doRollover(33);" onmouseout="undoRollover(33);" id="8092" name="33" style="color:#006331" class="#006331"><span class="b-ref">33</span>attribute in<span> Sale </span>fact table,<span> from </span>Product dimension table.</a> Market_sID A unique identification code for a market The Market_sID is <a href="javascript:openDSC(768604155, 1, '12931');" onmouseover="doRollover(62);" onmouseout="undoRollover(62);" id="12931" name="62" style="color:#33cc99" class="#33cc99"><span class="b-ref">62</span>a surrogate in Sale fact table,</a> from Market dimension table. <a href="javascript:openDSC(763924115, 1, '15441');" onmouseover="doRollover(18);" onmouseout="undoRollover(18);" id="15441" name="18" style="color:#cc6600" class="#cc6600"><span class="b-ref">18</span>Customer dimension table Attribute Description Source Customer_<span> Record Customer's </span>surrogate key</a> to prevent situations where customer changes information <a href="javascript:openDSC(424011608, 1, '14857');" onmouseover="doRollover(5);" onmouseout="undoRollover(5);" id="14857" name="5" style="color:#ff6600" class="#ff6600"><span class="b-ref">5</span>The Customer_<span> Record </span>attribute in Customer table,</a> data is automatically generated when loaded. CustomerID A unique identification code for a customer The CustomerID <a href="javascript:openDSC(423658950, 1, '3827');" onmouseover="doRollover(12);" onmouseout="undoRollover(12);" id="3827" name="12" style="color:#006331" class="#006331"><span class="b-ref">12</span>attribute in Customer table,<span> from </span>The Merchant Sales System.<span> FirstName </span>The<span> FirstName </span>of<span> each </span>customer<span> The FirstName </span>attribute in Customer table,<span> from </span>The Merchant Sales System.<span> LastName </span>The<span> LastName </span>of<span> each </span>customer<span> The LastName </span>attribute in Customer table,<span> from </span>The Merchant Sales System.<span> DateOfBirth </span>The<span> birthday </span>of each customer</a><a href="javascript:openDSC(1064765494, 1, '7611');" onmouseover="doRollover(15);" onmouseout="undoRollover(15);" id="7611" name="15" style="color:#ce0031" class="#ce0031"><span class="b-ref">15</span>The<span> Date </span>of<span> Birth </span>attribute in Customer table,<span> from </span>The<span> Merchant </span>Sales System.<span> GroupAge </span>The<span> age group </span>of<span> each </span>customer<span> The Group Age </span>attribute in Customer table,<span> from </span>The<span> Merchant </span>Sales System.<span> Postcode </span>The<span> postcode </span>of<span> each </span>customer’</a> s address The Postcode <a href="javascript:openDSC(707597963, 1, '3213');" onmouseover="doRollover(4);" onmouseout="undoRollover(4);" id="3213" name="4" style="color:brown" class="brown"><span class="b-ref">4</span>attribute in Customer table, from The Merchant Sales System. Address The<span> address </span>of<span> each </span>customer<span> The </span>Address attribute in Customer table, from The Merchant Sales System. Suburb The<span> suburb </span>of<span> each </span>customer’s address<span> The Suburb </span>attribute in Customer table, from The Merchant Sales System.<span> Gender </span>The<span> gender </span>of<span> each </span>customer’s<span> address The Gender </span>attribute in Customer table, from The Merchant Sales System.</a><a href="javascript:openDSC(706826431, 1, '6239');" onmouseover="doRollover(37);" onmouseout="undoRollover(37);" id="6239" name="37" style="color:#cc9900" class="#cc9900"><span class="b-ref">37</span>Product dimension table Attribute Description Source ProductID<span> A </span>unique<span> identification code </span>for<span> each </span>product<span> The </span>ProductID<span> is an </span>attribute</a><a href="javascript:openDSC(907602515, 1, '11363');" onmouseover="doRollover(6);" onmouseout="undoRollover(6);" id="11363" name="6" style="color:#630000" class="#630000"><span class="b-ref">6</span>of The Product<span> dimension </span>table,<span> from </span>The<span> Production </span>System. Description The<span> specific brand </span>of each product<span> The </span>Description<span> is an attribute </span>of The Product<span> dimension </span>table,<span> from </span>The<span> Production </span>System. Group The<span> specific types </span>of each product<span> The </span>Group<span> is an attribute </span>of The Product<span> dimension </span>table,<span> from </span>The<span> Production </span>System.<span> Cost </span>The<span> specific cost </span>of each product The</a> Cost is <a href="javascript:openDSC(424011608, 1, '14826');" onmouseover="doRollover(5);" onmouseout="undoRollover(5);" id="14826" name="5" style="color:#ff6600" class="#ff6600"><span class="b-ref">5</span>an attribute<span> of </span>The Product dimension table,<span> from </span>The</a> Production <a href="javascript:openDSC(907393464, 1, '38740');" onmouseover="doRollover(34);" onmouseout="undoRollover(34);" id="38740" name="34" style="color:#9966ff" class="#9966ff"><span class="b-ref">34</span>System. Unit_price<span> Recommended retail </span>price for<span> each </span>product<span> The </span>Unit_price<span> is an </span>attribute<span> of </span>The Product<span> dimension </span>table,</a> from The Merchant Sales <a href="javascript:openDSC(1064850542, 1, '14404');" onmouseover="doRollover(17);" onmouseout="undoRollover(17);" id="14404" name="17" style="color:#63009c" class="#63009c"><span class="b-ref">17</span>System. Price The<span> actual retail </span>price of<span> each </span>product<span> The </span>Price<span> is an </span>attribute<span> of </span>The Product<span> dimension </span>table,<span> from </span>The<span> Merchant Sales </span>System.</a> ProductionCode A unique identification code for each production lot The ProductionCode is <a href="javascript:openDSC(424011608, 1, '14835');" onmouseover="doRollover(5);" onmouseout="undoRollover(5);" id="14835" name="5" style="color:#ff6600" class="#ff6600"><span class="b-ref">5</span>an attribute<span> of </span>The Product dimension table,<span> from </span>The</a> Production <a href="javascript:openDSC(424011608, 1, '14953');" onmouseover="doRollover(5);" onmouseout="undoRollover(5);" id="14953" name="5" style="color:#ff6600" class="#ff6600"><span class="b-ref">5</span>dimension table<span> Production </span>dimension table Attribute Description Source<span> ProductionCode </span>A unique<span> identification code </span>for<span> each production lot </span>The</a> ProductionCode is an <a href="javascript:openDSC(327582194, 1, '5597');" onmouseover="doRollover(7);" onmouseout="undoRollover(7);" id="5597" name="7" style="color:#009cff" class="#009cff"><span class="b-ref">7</span>attribute of The Production<span> dimension </span>table,<span> from </span>The Production System.<span> Volumn The amount </span>of<span> each </span>production</a> The Volumn is an <a href="javascript:openDSC(327582194, 1, '5603');" onmouseover="doRollover(7);" onmouseout="undoRollover(7);" id="5603" name="7" style="color:#009cff" class="#009cff"><span class="b-ref">7</span>attribute of The Production<span> dimension </span>table,<span> from </span>The Production System.<span> YearOfProduction Year record </span>of<span> each </span>production</a> The YearOfProduction is an <a href="javascript:openDSC(327582194, 1, '5609');" onmouseover="doRollover(7);" onmouseout="undoRollover(7);" id="5609" name="7" style="color:#009cff" class="#009cff"><span class="b-ref">7</span>attribute of The Production<span> dimension </span>table,<span> from </span>The Production System.</a><a href="javascript:openDSC(907632014, 1, '19591');" onmouseover="doRollover(3);" onmouseout="undoRollover(3);" id="19591" name="3" style="color:blue" class="blue"><span class="b-ref">3</span>Time dimension table<span> Attributes </span>Description Source<span> TimeID The </span>unique identifier for<span> time </span>A unique number for data warehouse<span> DayOfWeek </span>The<span> weekday </span>for each<span> saleAggregated for each </span>transaction<span> in weekdays Month </span>The</a> month for each sale Aggregated for each transaction in months <a href="javascript:openDSC(1064850542, 1, '14521');" onmouseover="doRollover(17);" onmouseout="undoRollover(17);" id="14521" name="17" style="color:#63009c" class="#63009c"><span class="b-ref">17</span>Season The season<span> for </span>each sale Aggregated for each</a> transaction in seasons FinQuater The financial quarter for each Aggregated for each transaction in financial quaters HalfYear Categorize sale in half year Aggregated for each transaction in half of year <a href="javascript:openDSC(1064850542, 1, '14512');" onmouseover="doRollover(17);" onmouseout="undoRollover(17);" id="14512" name="17" style="color:#63009c" class="#63009c"><span class="b-ref">17</span>Year The<span> calendar </span>year<span> for </span>each sale Aggregated for each</a> transaction in years WeekNo. Measure sales weekly Aggregated for each transaction in weeks Sales_agent dimension table Attributes Description Source Sales_agent_Record A numeric identifier for each change of agent A surrogate key for each change of agent table AgentID A <a href="javascript:openDSC(907602515, 1, '11347');" onmouseover="doRollover(6);" onmouseout="undoRollover(6);" id="11347" name="6" style="color:#630000" class="#630000"><span class="b-ref">6</span>unique identifier for each<span> agent </span>A<span> distinct </span>number generated<span> in </span>the<span> original database AgentName </span>The<span> name </span>of</a> each agent Extracted from the product system <a href="javascript:openDSC(1479405225, 1, '1740');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="1740" name="1" style="color:red" class="red"><span class="b-ref">1</span>CommissionRate The commission rate<span> for </span>each<span> agent Gained form </span>each</a> transaction for each agent AgentArea The area where agent sales Extracted from the product system about agent information <a href="javascript:openDSC(763842825, 1, '235');" onmouseover="doRollover(21);" onmouseout="undoRollover(21);" id="235" name="21" style="color:#336699" class="#336699"><span class="b-ref">21</span>Market dimension table<span> Attributes </span>Description Source Market_<span> sID A numeric </span>identifier for each<span> change of </span>market</a> A surrogate key for each change of market table MarketID A numeric <a href="javascript:openDSC(768692524, 1, '12213');" onmouseover="doRollover(24);" onmouseout="undoRollover(24);" id="12213" name="24" style="color:blue" class="blue"><span class="b-ref">24</span>identifier for each market Extracted from the<span> merchant </span>sales system MarketName<span> The </span>name of<span> each </span>market</a> Extracted from merchant sales system about market information MarketRegion The region where <a href="javascript:openDSC(768692524, 1, '12218');" onmouseover="doRollover(24);" onmouseout="undoRollover(24);" id="12218" name="24" style="color:blue" class="blue"><span class="b-ref">24</span>each market is Extracted from<span> merchant </span>sales system</a> about market geographic information Appendix 2 – SQL 1. <a href="javascript:openDSC(1024458243, 1, '49118');" onmouseover="doRollover(8);" onmouseout="undoRollover(8);" id="49118" name="8" style="color:#31ff00" class="#31ff00"><span class="b-ref">8</span>CREATE TABLE IF NOT EXISTS<span> `mydb </span>`.`Customer`<span> ( `Customer_Record` </span>INT NOT NULL,<span> `CustomerID` INT </span>NOT NULL,<span> `FirstName` </span>VARCHAR(45) NOT NULL,<span> `LastName` </span>VARCHAR(45) NOT NULL,<span> `DateOfBirth` </span>VARCHAR(45) NOT NULL,<span> `GroupAge` </span>INT NOT NULL, `Postcode` INT NOT NULL,<span> `Address` </span>VARCHAR(45) NOT NULL,<span> `Suburb` </span>VARCHAR(45) NOT NULL,</a> `Gender` <a href="javascript:openDSC(907635937, 1, '23193');" onmouseover="doRollover(27);" onmouseout="undoRollover(27);" id="23193" name="27" style="color:#630000" class="#630000"><span class="b-ref">27</span>VARCHAR(45) NOT NULL, PRIMARY KEY<span> (`Customer_Record`)) </span>ENGINE = InnoDB; CREATE INDEX<span> `GroupAge` </span>ON `mydb`.`<span> Customer` () VISIBLE; </span>CREATE INDEX `Postcode` ON `mydb`.`</a> Customer` () VISIBLE; 2. <a href="javascript:openDSC(164767723, 1, '42773');" onmouseover="doRollover(10);" onmouseout="undoRollover(10);" id="42773" name="10" style="color:#00cc99" class="#00cc99"><span class="b-ref">10</span>CREATE TABLE IF NOT EXISTS `mydb`.`<span> Time` ( `TimeID` </span>INT NOT NULL,<span> `DayOfWeek` </span>VARCHAR(45) NOT NULL,<span> `Month` INT </span>NOT NULL,<span> `Season` </span>VARCHAR(45) NOT NULL,<span> `FinQuater` INT </span>NOT NULL,<span> `HalfYear` INT </span>NOT NULL,<span> `Year` INT </span>NOT NULL,<span> `WeekNo.` INT </span>NOT NULL, PRIMARY KEY<span> (`TimeID`)) </span>ENGINE = InnoDB;<span> 3. </span>CREATE TABLE IF NOT EXISTS `mydb`.`</a> Sales_agent` ( `Sales_agent_Record` <a href="javascript:openDSC(186405278, 1, '20668');" onmouseover="doRollover(13);" onmouseout="undoRollover(13);" id="20668" name="13" style="color:#9966ff" class="#9966ff"><span class="b-ref">13</span>VARCHAR(45) NOT NULL,<span> `AgentID` </span>INT NOT NULL,<span> `AgentName` </span>VARCHAR(45) NOT NULL,<span> `CommissionRate` INT </span>NOT NULL,<span> `AgentArea` </span>VARCHAR(45) NOT NULL, PRIMARY KEY<span> (`Sales_agent_Record`)) </span>ENGINE = InnoDB; CREATE</a> INDEX `AgentID` ON `mydb`.`Sales_agent` () VISIBLE; CREATE INDEX `AgentArea` ON `mydb`.`Sales_agent` () VISIBLE; 4. <a href="javascript:openDSC(315013538, 1, '46509');" onmouseover="doRollover(14);" onmouseout="undoRollover(14);" id="46509" name="14" style="color:#9c6331" class="#9c6331"><span class="b-ref">14</span>CREATE TABLE IF NOT EXISTS `mydb`.`<span> Market` ( `MarketID` </span>INT NOT NULL,<span> `MarketName` </span>VARCHAR(45)<span> NOT </span>NULL,<span> `MarketRegion` </span>VARCHAR(45)<span> NOT </span>NULL, PRIMARY KEY<span> (`MarketID`)) </span>ENGINE = InnoDB;<span> 5. </span>CREATE TABLE IF NOT EXISTS `mydb`.`<span> Production` ( `ProductionCode` </span>INT NOT NULL,<span> `Volumn` </span>INT NOT NULL,<span> `YearOfProduction` INT NOT </span>NULL,</a><a href="javascript:openDSC(186405278, 1, '20694');" onmouseover="doRollover(13);" onmouseout="undoRollover(13);" id="20694" name="13" style="color:#9966ff" class="#9966ff"><span class="b-ref">13</span>PRIMARY KEY<span> (`ProductionCode`)) </span>ENGINE = InnoDB;<span> 6. CREATE </span>TABLE IF NOT EXISTS `mydb`.`Product` ( `ProductID`</a><a href="javascript:openDSC(1479542887, 1, '47821');" onmouseover="doRollover(11);" onmouseout="undoRollover(11);" id="47821" name="11" style="color:#ff0063" class="#ff0063"><span class="b-ref">11</span>INT NOT NULL,<span> `Description` </span>VARCHAR(45) NOT NULL,<span> `Group` VARCHAR(45) </span>NOT NULL,<span> `Cost` </span>INT NOT NULL,<span> `Unit_price` </span>INT NOT NULL,<span> `Price` INT </span>NOT NULL,<span> `ProductionCode` INT </span>NOT NULL, PRIMARY KEY<span> (`ProductID`), </span>CONSTRAINT `fk_<span> product_production1` </span>FOREIGN KEY<span> (`ProductionCode`) </span>REFERENCES `mydb`.`<span> Production` (`ProductionCode`) </span>ON DELETE NO ACTION ON UPDATE NO ACTION)</a><a href="javascript:openDSC(988542093, 1, '22760');" onmouseover="doRollover(53);" onmouseout="undoRollover(53);" id="22760" name="53" style="color:#ff0063" class="#ff0063"><span class="b-ref">53</span>ENGINE = InnoDB; CREATE INDEX ON `mydb`.`<span> Product` (`ProductionCode` </span>ASC) VISIBLE;</a> 7. <a href="javascript:openDSC(1571764811, 1, '40918');" onmouseover="doRollover(25);" onmouseout="undoRollover(25);" id="40918" name="25" style="color:brown" class="brown"><span class="b-ref">25</span>CREATE TABLE IF NOT EXISTS `mydb`.`<span> Sale` ( `SalesID` </span>INT NOT NULL,<span> `Unit_Sales` INT </span>NOT NULL,<span> `SalePrice` </span>DECIMAL(<span> 7 </span>,2) NOT NULL,<span> `Line` </span>INT NOT NULL,<span> `Margin` </span>INT</a><a href="javascript:openDSC(1479473652, 1, '6152');" onmouseover="doRollover(2);" onmouseout="undoRollover(2);" id="6152" name="2" style="color:green" class="green"><span class="b-ref">2</span>NOT NULL,<span> `TimeID` </span>INT NOT NULL,<span> `Sales_agent_Record` </span>INT NOT NULL,<span> `Customer_Record` </span>INT NOT NULL,<span> `ProductID` </span>INT NOT NULL,<span> `MarketID` </span>INT NOT NULL, PRIMARY KEY<span> (`SalesID`), </span>CONSTRAINT `fk_Sale_<span> time` </span>FOREIGN KEY<span> (`TimeID`) </span>REFERENCES `mydb`.`<span> Time` (`TimeID`) </span>ON DELETE NO ACTION ON UPDATE NO ACTION, CONSTRAINT `fk_Sale_<span> Sales_agent1` </span>FOREIGN KEY<span> (`Sales_agent_Record`) </span>REFERENCES `mydb`.`<span> Sales_agent` (`AgentID`) </span>ON DELETE NO ACTION ON UPDATE NO ACTION, CONSTRAINT `fk_Sale_customer1` FOREIGN KEY<span> (`Customer_Record`) </span>REFERENCES `mydb`.`Customer` (`CustomerID`) ON DELETE NO ACTION ON UPDATE NO ACTION, CONSTRAINT `fk_Sale_<span> product1` </span>FOREIGN KEY<span> (`ProductID`) </span>REFERENCES `mydb`.`<span> Product` (`ProductID`) </span>ON DELETE NO ACTION ON UPDATE NO ACTION, CONSTRAINT `fk_Sale_<span> market1` </span>FOREIGN KEY<span> (`MarketID`) </span>REFERENCES `mydb`.`<span> Market` (`MarketID`) </span>ON DELETE NO ACTION ON UPDATE NO ACTION) ENGINE = InnoDB; CREATE INDEX `fk_Sale_<span> time </span>_idx` ON `mydb`.`Sale`<span> (`TimeID` </span>ASC)<span> VISIBLE; </span>CREATE INDEX `fk_Sale_<span> Sales_agent1 </span>_idx` ON `mydb`.`Sale`<span> (`Sales_agent_Record` </span>ASC)<span> VISIBLE; </span>CREATE INDEX `fk_Sale_customer1_idx` ON `mydb`.`Sale`<span> (`Customer_Record` </span>ASC)<span> VISIBLE; </span>CREATE INDEX `fk_Sale_<span> product1 </span>_idx` ON `mydb`.`Sale`<span> (`ProductID` </span>ASC)<span> VISIBLE; </span>CREATE INDEX `fk_Sale_<span> market1 </span>_idx` ON `mydb`.`Sale`<span> (`MarketID` </span>ASC)</a> VISIBLE; 
+</div>
+</div>
+</body>
+</html>
